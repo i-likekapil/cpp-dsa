@@ -44,6 +44,10 @@ int main() {
     print(arr, 7);
     moveZeros(arr, 7);
     print(arr, 7);
+    int arr1[] = {1, 0, 1, 1, 0, 1, 1};
+    print(arr1, 7);
+    moveZeros(arr1, 7);
+    print(arr1, 7);
 
     return 0;
 }
