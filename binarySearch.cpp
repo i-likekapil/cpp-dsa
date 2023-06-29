@@ -98,7 +98,8 @@ int pivotInRotatedSortedArray(int *arr, int size){
 
 int binarySearchInRotatedSortedArray(int *arr, int size, int key) {
     int pivot = pivotInRotatedSortedArray(arr, size);
-    if (arr[pivot] > key)
+    cout<< " : "<<pivot<<" :"<<endl;
+    if (arr[pivot] >= key)
         return binarySearchRec(arr, size, key, pivot, size);
     return binarySearchRec(arr, size, key, 0, pivot);
 }
@@ -118,9 +119,10 @@ int main() {
 //    int arr1[5] = {1, 2, 3, 4, 5};
 //    cout << "\npivot element is " << pivotInRotatedSortedArray(arr1, 5);
 
-    int arr[5] ={8,9,1,2,3};
-    int key = 9;
-    cout<<"element in rotated sorted array at index "<< binarySearchInRotatedSortedArray(arr,5,key);
+    int arr[7] ={4,5,6,7,0,1,2};
+    //int arr[2] ={1,3};
+    int key = 0;
+    cout<<"element in rotated sorted array at index "<< binarySearchInRotatedSortedArray(arr,7,key);
 
 
     return 0;
