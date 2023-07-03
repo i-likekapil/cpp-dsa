@@ -45,7 +45,7 @@ void print(int arr[], int n) {
 }
 
 int main() {
-    int n = 9;
+    int n = 5;
     cout << fib(n);
 
     return 0;
