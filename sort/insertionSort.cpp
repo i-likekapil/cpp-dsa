@@ -9,7 +9,16 @@ void print(vector<int> &v) {
 }
 
 void insertionSort(vector<int> &v) {
-    // ToDo: understand and write code for insertion sort with theory and dry run
+    int key,j;
+    for(int i=0;i<v.size();i++){
+        key = v[i];
+        j= i-1;
+        while(j>=0 && v[j] > key){
+            v[j+1] = v[j];
+            j--;
+        }
+        v[j+1] = key;
+    }
 }
 
 int main() {
