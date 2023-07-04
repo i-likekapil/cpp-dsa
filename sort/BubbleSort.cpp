@@ -10,17 +10,19 @@ void print(vector<int> &v) {
 
 void bubbleSort(vector<int> &v) {
     for (int i = 0; i < v.size(); i++) {
-        for (int j = i; j < v.size(); j++) {
-            if (v[i] > v[j]) {
-                swap(v[i], v[j]);
+        for (int j = 0; j < v.size() - i - 1; j++) {
+            if (v[j] > v[j + 1]) {
+                swap(v[j + 1], v[j]);
             }
+            print(v);
         }
+        cout << endl;
     }
 }
 
 int main() {
 
-    vector<int> v = {5, 1, 9, 5, 0, 2, 8};
+    vector<int> v = {10,1,7,6,14,9};
     print(v);
     bubbleSort(v);
     print(v);
